@@ -22,49 +22,38 @@ public class MyPanelClass extends JPanel {
                         int y2 = getHeight() - myInsets.bottom - 1;
                         int width = x2 - x1;
                         int height = y2 - y1;
+                        int starPosx = -10;
+                        int starPosy = -10;
  
                         //Paint the background
-                        g.setColor(Color.ORANGE);
+                        g.setColor(Color.RED);
                         g.fillRect(x1, y1, width+1, height+1);
                         
-                        /*
-                        g.setColor(Color.YELLOW);
-                        g.drawRect(x1, y1, width, height);
-                        
-                        g.setColor(Color.BLACK);
-                        g.drawRect(x1+4, y1+4, width-9, height-9);
                         
                         g.setColor(Color.WHITE);
-                        g.drawLine(x1, y1, x2, y2);
+                        g.fillRect(x1, height/5, width +1, height/5);
                         
-                        g.setColor(Color.LIGHT_GRAY);
-                        g.fillOval((width/2)-27, (height/2)-27, 55, 55);
+                        g.fillRect(x1, 3*height/5, width +1, height/5);
                         
-                        Polygon p = new Polygon();
-                        p.addPoint(x1 + 5, y1 + 25);
-                        p.addPoint(x1 + 20, y1 + 10);
-                        p.addPoint(x1 + 35, y1 + 25);
-                        p.addPoint(x1 + 25, y1 + 25);
-                        p.addPoint(x1 + 25, y1 + 45);
-                        p.addPoint(x1 + 15, y1 + 45);
-                        p.addPoint(x1 + 15, y1 + 25);
-                        g.setColor(Color.YELLOW);
-                        g.fillPolygon(p);
-                        */
-                        
+                        Polygon p1 = new Polygon();
+                        p1.addPoint(x1, y1);
+                        p1.addPoint(width/2, height/2);
+                        p1.addPoint(x1, height);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(p1);
                         
                         Polygon p2 = new Polygon();
-                        p2.addPoint(x1 + 25, y1 + 73);
-                        p2.addPoint(x1 + 41, y1 + 73);
-                        p2.addPoint(x1 + 47, y1 + 58);
-                        p2.addPoint(x1 + 53, y1 + 73);
-                        p2.addPoint(x1 + 69, y1 + 73);
-                        p2.addPoint(x1 + 56, y1 + 83);
-                        p2.addPoint(x1 + 61, y1 + 98);
-                        p2.addPoint(x1 + 47, y1 + 88);
-                        p2.addPoint(x1 + 34, y1 + 98);
-                        p2.addPoint(x1 + 38, y1 + 83);
+                        p2.addPoint(x1 + 25 + starPosx, y1 + 73 + starPosy);
+                        p2.addPoint(x1 + 41 + starPosx, y1 + 73 + starPosy);
+                        p2.addPoint(x1 + 47 + starPosx, y1 + 58 + starPosy);
+                        p2.addPoint(x1 + 53 + starPosx, y1 + 73 + starPosy);
+                        p2.addPoint(x1 + 69 + starPosx, y1 + 73 + starPosy);
+                        p2.addPoint(x1 + 56 + starPosx, y1 + 83 + starPosy);
+                        p2.addPoint(x1 + 61 + starPosx, y1 + 98 + starPosy);
+                        p2.addPoint(x1 + 47 + starPosx, y1 + 88 + starPosy);
+                        p2.addPoint(x1 + 34 + starPosx, y1 + 98 + starPosy);
+                        p2.addPoint(x1 + 38 + starPosx, y1 + 83 + starPosy);
                         g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillPolygon(p2);
             }
 }
